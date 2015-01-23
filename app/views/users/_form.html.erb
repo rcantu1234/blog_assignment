@@ -11,15 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :firstname, "First Name: " %><br>
-    <%= f.text_field :firstname %>
-  </div>
-  <div class="field">
-    <%= f.label :lastname, "Last Name: " %><br>
-    <%= f.text_field :lastname %>
-  </div>
+  <fieldset class="field">
+    <%= f.label :firstname, "First Name: " %>
+    <%= f.text_field :firstname %><br>
+    <%= f.label :lastname, "Last Name: " %>
+    <%= f.text_field :lastname %><br>
+  </fieldset>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create User" %>
   </div>
 <% end %>
