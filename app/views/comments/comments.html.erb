@@ -1,19 +1,6 @@
-<p id="notice"><%= notice %></p>
 <p>
-<table>
-  <tbody>
-    <strong>Commenter:</strong>
-      <% @comments.each do |comment| %>
-        <tr>
-          <td><%= comment.commenter %></td>
-         <!--  <td><%= comment.body %></td> -->
-          <td><%= link_to 'Show', article %></td>
-          <td><%= link_to 'Edit', edit_article_path(article) %></td>
-          <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-      <% end %>
-  </tbody>
-</table>
+  <strong>Commenter:</strong>
+  <%= comments.commenter %>
 </p>
 
 <p>
@@ -24,8 +11,7 @@
 
 
 <p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
+  <%= link_to 'Destroy Comment', [comments.article, comment],
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
 </p>
-
