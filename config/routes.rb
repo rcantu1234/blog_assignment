@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :comments
     end
 
+get "/comments", to: "comments#comments"
+
   resources :users
 
   root 'users#new'
