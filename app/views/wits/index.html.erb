@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<head>
+  <title>Witter</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
 <h1>Listing Wits</h1>
 
 <table>
@@ -10,18 +17,26 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @wits.each do |wit| %>
-      <tr>
-        <td><%= wit.message %></td>
-        <td><%= link_to 'Show', wit %></td>
-        <td><%= link_to 'Edit', edit_wit_path(wit) %></td>
-        <td><%= link_to 'Destroy', wit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<div class="container">
+  <div class="row">
+    <div class="content">
+      <tbody>
+        <% @wits.each do |wit| %>
+          <tr>
+            <td><%= wit.message %></td>
+            <td><%= link_to 'Show', wit %></td>
+            <td><%= link_to 'Edit', edit_wit_path(wit) %></td>
+            <td><%= link_to 'Destroy', wit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </div>
+  </div>
+</div>
 </table>
+
 
 <br>
 
 <%= link_to 'New Wit', new_wit_path %>
+

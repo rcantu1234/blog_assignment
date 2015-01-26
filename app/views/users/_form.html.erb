@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <fieldset class="field">
+  <fieldset class="table-format">
     <%= f.label :firstname, "First Name: " %>
     <%= f.text_field :firstname %><br>
     <%= f.label :lastname, "Last Name: " %>
     <%= f.text_field :lastname %><br>
   </fieldset>
 
+<br>
+
   <div class="actions">
     <%= f.submit "Create User" %>
   </div>
 <% end %>
 
-
-<%= link_to "comments", comments_path %>
