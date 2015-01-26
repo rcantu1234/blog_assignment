@@ -20,3 +20,4 @@ gem "rails_12factor", "~> 0.0", {:group=>:production}
 gem "thin", "~> 1.6"
 gem "bootstrap-sass", "~> 3.3.3"
 gem "sass-rails", "~> 5.0"
+gem "touch procfile"
