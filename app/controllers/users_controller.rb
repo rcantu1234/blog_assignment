@@ -19,12 +19,13 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @article = Article.find(params[:id])
   end
 
   # POST /users
   # POST /users.json
   def create
-    @users = User.new(user_params)
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
